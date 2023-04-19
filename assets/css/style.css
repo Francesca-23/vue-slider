@@ -40,13 +40,12 @@
 
 .box-image{
     height: calc(100% / 5);
-    background-color: black;
+    
 }
 
 .box-image img{
-    opacity: 0.5;
+    filter: brightness(0.5);
 }
-
 
 
 .item{
@@ -66,8 +65,8 @@
 }
 
 
-.active{
-    opacity: 1;
+img.active{
+    filter: brightness(1);
 }
 
 img{

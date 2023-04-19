@@ -33,9 +33,11 @@ createApp({
         ],
 
         activeImg: 0,
-
+        scroll: null
     }
   },
+
+
   methods: {
 
     changeImage(){
@@ -49,6 +51,11 @@ createApp({
         if(this.activeImg < 0){
             this.activeImg = this.images.length -1;
         }
+    },
+    autoscroll(){
+        this.scroll = setInterval(function(){
+            this.changeImage()
+        }, 5000)
     }
 
   }
