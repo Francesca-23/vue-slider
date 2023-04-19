@@ -1,0 +1,77 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    position: relative;
+}
+
+
+.arrow-top, .arrow-down{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: lightgrey;
+    height: 1.3rem;
+    width: 1.3rem;
+    margin: auto;
+}
+
+.arrow-top{
+    position: absolute;
+    top: 0.5rem;
+    right: 50%;
+    cursor: pointer;
+}
+
+.arrow-down{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 50%;
+    cursor: pointer;
+}
+
+.big-box{
+    height: 37.5rem;
+}
+
+.box-image{
+    height: calc(100% / 5);
+    background-color: black;
+}
+
+.box-image img{
+    opacity: 0.5;
+}
+
+
+
+.item{
+    height: 37.5rem;
+    width: 50rem;
+    
+}
+
+.texts{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0.5rem 1rem;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.active{
+    opacity: 1;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
