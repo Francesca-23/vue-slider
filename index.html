@@ -17,14 +17,14 @@
        
         <div class="container d-flex">
     
-            <div class="slider" @mouseleave="autoscroll">   
+            <div class="slider" @mouseleave="autoscroll" @mouseover="stopscroll">   
                 
                 <div class="arrow-top" @click="changeImage">
                     <i class="fa-solid fa-chevron-up"></i>
                 </div>
                 
                 <div class="images"> 
-                    <img v-bind:src="images[activeImg].image" alt="" class="item" >  
+                    <img v-bind:src="images[activeImg].image" alt="image" class="item" >  
                     <div class="texts">
                         <h5>{{ images[activeImg].title }}</h5>
                         <p>{{ images[activeImg].text }}</p> 
@@ -41,11 +41,7 @@
     
             <div class="big-box">
                 <div v-for="(element, index) in images" class="box-image" >
-                    <img  v-bind:src="element.image" alt="" v-bind:class="(activeImg == index) ? 'active' : '' ">
-                    <div class="d-none">
-                        <h5>{{ element.title }}</h5>
-                        <p>{{ element.text }}</p>
-                    </div>
+                    <img  v-bind:src="element.image" alt="image" v-bind:class="(activeImg == index) ? 'active' : '' ">
                 </div>
             </div>
     

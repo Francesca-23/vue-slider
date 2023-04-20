@@ -37,6 +37,9 @@ createApp({
     }
   },
 
+  created(){
+    this.autoscroll()
+  },
 
   methods: {
 
@@ -53,9 +56,13 @@ createApp({
         }
     },
     autoscroll(){
-        this.scroll = setInterval(function(){
+        this.scroll = setInterval(() => {
             this.changeImage()
-        }, 5000)
+        }, 2000)
+    },
+    stopscroll(){
+        clearInterval(this.scroll)
+        this.scroll = null
     }
 
   }
